@@ -1,0 +1,181 @@
+//AUDIO
+
+LAF HANDLE_AUDIO END
+
+///////////////
+// CREATURES //
+///////////////
+
+COPY ~%MOD_FOLDER%/creatures/C0GULD.cre~ ~override~
+  SAY NAME1 ~Guldruk~
+  SAY NAME2 ~Guldruk~
+  WRITE_ASCII SCRIPT_OVERRIDE ~C0GULD~ // override
+  WRITE_ASCII DEATHVAR ~C0GULD~ // death variable
+  WRITE_ASCII DIALOG ~C0GULD~ // dialogue
+  WRITE_ASCII 0X34 ~C0GULDM~ #8   //small portrait
+  WRITE_ASCII 0x3c ~C0GULDL~ #8   //medium portrait
+  SAY INITIAL_MEETING ~I greet you, friend.~ [C0GUL000]
+  SAY BIO ~When asked about his past, GULDRUK gives a hearty laugh, warning you beforehand that his many years of experience would make for a long-winded tale, though he is fairly forthcoming. Having never known his birth parents, the half-orc was taken as a babe by a sympathetic barbarian elder of the Tribe of the Bear. Though always treated with a degree of guardedness by his human tribesmen, Guldruk was raised knowing the ideals of an honorable warrior of the Reghedmen. Guldruk's adolescent years were frequently spent in conflict both with rival tribes and the civilized folk of the Ten Towns, hardening him to the rigors of battle. His fate was changed, however, when he was rescued as a young warrior by a swordsman of eastern origin and, out of admiration, pleaded to the easterner for tutelage. With the blessing of his tribe, Guldruk departed with his teacher to wander the earth, honing his swordsmanship through combating evil in different lands throughout the Realms until returning to the Ten Towns to embark upon one more journey before retirement. The veteran half-orc undoubtedly has many stories to tell.~
+  SAY MORALE ~~
+  SAY HAPPY ~Great acts are made up of small deeds.~ [C0GUL001]
+  SAY UNHAPPY_ANNOYED ~One who is most insistent on his own views, finds few who agree with him.~ [C0GUL002]
+  SAY UNHAPPY_SERIOUS ~The wicked leader is he who the people despise.~ [C0GUL003]
+  SAY UNHAPPY_BREAKING ~...Enough.~ [C0GUL004]
+  SAY LEADER ~To lead people, walk behind them.~ [C0GUL005]
+  SAY TIRED ~These weathered bones ache, my friend. Allow this old one his moment of respite.~ [C0GUL006]
+  SAY BORED ~“Do you have the patience to wait, till your mud settles and the water is clear? Can you remain unmoving, till the right action arises by itself?”~ [C0GUL007]
+  SAY BATTLE_CRY1 ~Know thyself, know thy enemy.~ [C0GUL008]
+  SAY BATTLE_CRY2 ~A thousand battles, a thousand victories.~ [C0GUL009]
+  SAY BATTLE_CRY3 ~My will is stronger than any steel.~ [C0GUL010]
+  SAY BATTLE_CRY4 ~Bloodshed is the price for survival.~ [C0GUL011]
+  SAY BATTLE_CRY5 ~Come, ignorant whelp. Face me.~ [C0GUL012]
+  SAY DAMAGE ~Ugh!~ [C0GUL013]
+  SAY DYING ~Ngh...~ [C0GUL014]
+  SAY HURT ~Another scar on the hide of the Iron Bear.~ [C0GUL015]
+  SAY AREA_FOREST ~Nature does not hurry, yet everything is accomplished.~ [C0GUL016]
+  SAY AREA_CITY ~The life of the common man is worth more than anyone knows.~ [C0GUL017]
+  SAY AREA_DUNGEON ~Remain alert, my friend. The shadow of death lurks behind every wall.~ [C0GUL018]
+  SAY AREA_DAY ~So long as I breathe, I will always be glad to see another dawn.~ [C0GUL019]
+  SAY AREA_NIGHT ~Seeing into darkness is clarity.~ [C0GUL020]
+  SAY SELECT_COMMON1 ~What is your command?~ [C0GUL021]
+  SAY SELECT_COMMON2 ~Speak, friend.~ [C0GUL022]
+  SAY SELECT_COMMON3 ~This old one listens.~ [C0GUL023]
+  SAY SELECT_COMMON4 ~Guide me well.~ [C0GUL024]
+  SAY SELECT_COMMON5 ~Be sagacious in all choices.~ [C0GUL025]
+  SAY SELECT_COMMON6 ~This blade may break, but never dull.~ [C0GUL026]
+  SAY SELECT_ACTION1 ~Every step is on the path.~ [C0GUL027]
+  SAY SELECT_ACTION2 ~A leader leads by example, not by force.~ [C0GUL028]
+  SAY SELECT_ACTION3 ~I have life in me yet.~ [C0GUL029]
+  SAY SELECT_ACTION4 ~Silence is a source of great strength.~ [C0GUL030]
+  SAY SELECT_ACTION5 ~He who knows does not speak. He who speaks does not know.~ [C0GUL031]
+  SAY SELECT_ACTION6 ~Ah... my friend. Prod not this old one in his moment of contemplation.~ [C0GUL032]
+  SAY SELECT_ACTION7 ~Zzz... *snort* Hmm? Yes, I'm still alive.~ [C0GUL033]
+  SAY SELECT_RARE1 ~As soon as you have a thought, laugh at it.~ [C0GUL034]
+  SAY SELECT_RARE2 ~There is a time to live, and a time to die, but never to reject the moment.~ [C0GUL035]
+  SAY CRITICAL_HIT ~My blade sunders steel and flesh.~ [C0GUL036]
+  SAY CRITICAL_MISS ~Act without expectation.~ [C0GUL037]
+  SAY TARGET_IMMUNE ~Hmm... a different strategy may be required.~ [C0GUL038]
+  SAY INVENTORY_FULL ~Ah, my back... I fear this old one cannot bear the load as I once could.~ [C0GUL039]
+  SAY SPELL_DISRUPTED ~My concentration is disrupted.~ [C0GUL040]
+  SAY HIDDEN_IN_SHADOWS ~Attack where the foe is unprepared, appear where you are not expected.~ [C0GUL041]
+
+COPY ~%MOD_FOLDER%/creatures/C0GUELF.cre~ ~override~
+  SAY NAME1 ~Tu'viel~
+  SAY NAME2 ~Tu'viel~
+  WRITE_ASCII SCRIPT_OVERRIDE ~C0GUELF~ #8 // override
+  WRITE_ASCII DEATHVAR ~C0GUELF~ #8 // death variable
+  WRITE_ASCII DIALOG ~C0GUELF~ #8 // dialogue
+
+APPEND ~pdialog.2da~ ~C0GULD     C0GULDP           C0GULDJ          C0GULDD       C0GULDP           C0GULDJ              C0GULDD              C0GULD~
+UNLESS ~C0GULD~
+
+APPEND ~interdia.2da~ ~C0GULD BC0GULD BC0GULD~
+  UNLESS ~C0GULD~
+
+APPEND ~STATE.IDS~ // adds custom IsValidForPartyDialogue state
+  ~0x80101FEF CD_STATE_NOTVALID~
+  UNLESS ~CD_STATE_NOTVALID~
+  
+/////////////
+//DIALOGUES//
+/////////////
+
+COMPILE ~%MOD_FOLDER%/DIALOGUE/C0GULD.D~
+        ~%MOD_FOLDER%/DIALOGUE/C0GULDJ.D~
+
+///////////
+//SCRIPTS//
+///////////
+ 
+ACTION_FOR_EACH area_scripts IN 1000 1100 1104 2100 3503 3602 4004 5000 6001 6006 8006 8013 9200 9501 9604 9714 9800 BEGIN
+EXTEND_TOP ~AR%area_scripts%.BCS~ ~%MOD_FOLDER%/SCRIPTS/AR%area_scripts%.BAF~
+END
+
+ACTION_FOR_EACH new_scripts IN C0GULD C0GUELF C0GUCS1 C0GUCS2 C0GUCS3 BEGIN
+EXTEND_TOP ~%new_scripts%.BCS~ ~%MOD_FOLDER%/SCRIPTS/%new_scripts%.BAF~
+END
+
+/////////
+//ITEMS//
+/////////
+
+COPY ~%MOD_FOLDER%/items~ ~override~
+COPY_EXISTING ~C0GS1H43.itm~ ~override~
+SAY NAME2 ~Flawless Katana~
+SAY DESC ~The katana is a single-edged, slightly curved sword that ends with a chisel point. The katana is perhaps one of the finest swords ever made, the steps to its creation a long and secret process that is more art form than anything else. This blade is an important facet of Kara-Turan culture. To touch or wield a samurai's katana is to insult the samurai and to incite his wrath. For a gaijin, or foreigner, to own such a blade is a rare occurrence. Either the gaijin is a greatly honored friend of an important minister, or the gaijin has murdered a samurai.
+
+STATISTICS:
+
+THAC0: +2
+Damage: 1d10 (slashing)
+Speed Factor: 4
+Proficiency Type: Katana
+Type: One-handed
+Requires:
+ 6 Strength
+
+Weight: 6~
+
+COPY_EXISTING ~C0GULARM.itm~ ~override~
+  LPF ADD_ITEM_EQEFFECT
+    INT_VAR
+      opcode = 319
+	  target = 1
+	  timing = 2
+	  parameter2 = 11
+	  power = 1
+	  special = RESOLVE_STR_REF (~Guldruk~)
+	STR_VAR
+	  resource = C0GULD
+END
+SAY NAME1 ~Lacquered Armor~
+SAY NAME2 ~Guldruk's Armor~
+SAY DESC ~This suit of lacquered splint armor shows wear and tear from many battles, though it is obviously of fine quality considering it is still relatively intact. It is old-fashioned, much like its owner, and though the armor is less protective than more modern designs, Guldruk's familiarity in wearing it allows him to all but ignore its weight, allowing him to wear it without hindering his swordsmanship where other armors might.
+
+STATISTICS:
+
+Equipped abilities:
+– Piercing Resistance: +15%
+– Slashing Resistance: +15%
+– Missile Resistance: +15%
+
+Armor Class: 6 (4 vs. piercing and slashing)
+
+Weight: 0~
+
+COPY_EXISTING ~C0GULSW1.itm~ ~override~
+  LPF ADD_ITEM_EQEFFECT
+    INT_VAR
+      opcode = 319
+	  target = 1
+	  timing = 2
+	  parameter2 = 11
+	  power = 1
+	  special = RESOLVE_STR_REF (~Guldruk~)
+	STR_VAR
+	  resource = C0GULD
+END
+SAY NAME1 ~Katana~
+SAY NAME2 ~Alasa-vrynn +4~
+SAY DESC ~This moonblade, once belonging to the blademaster Tu'viel, general of the Hand of the Seldarine, was passed onto Guldruk of the Bear after a victory in single combat. It has changed its shape to better suit the half-orc warrior's fighting style, and though the ancestral spirits that once inhabited the blade have departed, some semblance of their powers remain, invigorated by newfound purpose and the desire to destroy evil. When cutting an evil creature, the blade's light becomes more radiant and it almost appears to come alive, guiding Guldruk to strike more swiftly and cut down foes with zeal. Furthermore, the energies of the weapon seems to have restored some of the aging warrior's lost spryness and stamina, and he now fights with the robustness of a man half his age.
+
+STATISTICS:
+
+Equipped abilities:
+– Dexterity: +4
+– Constitution: +2
+– Regenerate 1 Hit Point per 2 rounds
+
+Combat abilities:
+– Upon killing an evil creature, the wielder gains one bonus attack for the next round.
+
+THAC0: +4, strikes as a +5 weapon
+Damage: 1d10+4, +2 magic damage vs. evil creatures
+Damage Type: Slashing
+Speed Factor: 1
+Proficiency Type: Katana
+Type: One-handed
+Requires:
+ 6 Strength
+
+Weight: 3~
