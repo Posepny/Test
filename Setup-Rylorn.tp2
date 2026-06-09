@@ -1,0 +1,795 @@
+BACKUP~Rylorn\backup~
+AUTHOR~~
+BEGIN~Rylorn the NPC~
+ADD_KIT~C!Blackg~
+~C!Blackg 1 1 1 1 1 1 1 1~
+~C!Blackg 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2~
+~C!Blackg 9 0 0 0 0 17~
+~C!Blackg 0 0 0 0 0 0~
+~C!Blackg 0 0 0 0 0 0~
+~C!Blackg 0 0 0 0 0 0~
+~C!Blackg 0 0 1 0 0 1 0 0 1~
+~C!Blackg 0 0 0 0 0 0~
+~Rylorn/2da/c!black.2da~
+~~
+~0x00004000	6~
+~Pa0~
+~* * HELM07 BAG26 RING06 RING31 CLCK27 BOOT01 AMUL19 BRAC10 BELT06 AROW11,40 BULL03,40 BOLT06,40 POTN52,5 POTN04,2 POTN14,5 BOW11 BOW19 XBOW06~
+SAY~Blackguard~
+SAY~Blackguard~
+SAY~BLACKGUARD: The Blackguard epitomizes evil. Consorting with demons and devils and serving dark deities, The blackguard is hated and feared by all. The Blackguard has many options available to him - sending forth dark minions and servants to do his bidding, attacking with stealth and honorless guile, or straightforward smiting of the forces of good that stand in his way.
+
+
+Advantages:
+- Smite good: Once per day per five levels Blackguard may attempt to smite a good aligned enemy with one normal melee attack. If he manages to hit, then the target dies (no save)
+- Dark Blessing: Blackguard recieves +2 bonus to all saving throws 
+- Contagion: The experienced Blackguard can use Contagion as a spell-like ability (1/day)
+- Inflict Serious Wounds: Blackguard can use Inflict serious wounds at level 11
+- Inflict Critical wounds: Blackguard can use Inflict Critical Wounds as a spell-like ability at level 12 (1/day)
+- Create Undead: At level 10 Blackguard can attempt to summon an Undead ally as a servant (1/day)
+- Bull's Strength: At level 8 Blackguard may use Bull's Strength as a spell-like ability (1/day)
+- Summon Fiend: At level 20 Blackguard may attempt to summon a very powerful demon from the lower planes
+
+Disadvantages: none~
+
+COPY~Rylorn\2da\c!black.2da~ ~override\c!black.2da~
+COPY~Rylorn\Areas~ ~override~
+COPY~Rylorn\Bam~ ~override~
+COPY~Rylorn\Effects~ ~override~
+COPY~Rylorn\Spells\bullstre.spl~ ~override~
+SAY NAME1~Bull's Strength~
+SAY NAME2~Bull's Strength~
+SAY UNIDENTIFIED_DESC~Bull's Strength~
+COPY~Rylorn\Spells\contagio.spl~ ~override~
+SAY NAME1~Contagion~
+SAY NAME2~Contagion~
+SAY UNIDENTIFIED_DESC~Contagion~
+COPY~Rylorn\Spells\create00.spl~ ~override~
+SAY NAME1~Create Undead~
+SAY NAME2~Create Undead~
+SAY UNIDENTIFIED_DESC~Creates Undead~
+COPY~Rylorn\Spells\critical.spl~ ~override~
+SAY NAME1~Inflict Critical Wounds~
+SAY NAME2~Inflict Critical Wounds~
+SAY UNIDENTIFIED_DESC~Inflicts Critical Wounds~
+COPY~Rylorn\Spells\demon100.spl~ ~override~
+SAY NAME1~Summon Fiend~
+SAY NAME2~Summon Fiend~
+SAY UNIDENTIFIED_DESC~Summon Fiend~
+COPY~Rylorn\Spells\serious0.spl~ ~override~
+SAY NAME1~Inflict Serious Wounds~
+SAY NAME2~Inflict Serious Wounds~
+SAY UNIDENTIFIED_DESC~Inflicts Serious Wounds~
+COPY~Rylorn\Spells\smtgood0.spl~ ~override~
+SAY NAME1~Smite Good~
+SAY NAME2~Smite Good~
+SAY UNIDENTIFIED_DESC~Smites Good~
+COPY~Rylorn\Spells\spwi126.spl~ ~override~
+SAY NAME1~Mass Blindness~
+SAY NAME2~Mass Blindness~
+SAY UNIDENTIFIED_DESC~Mass Blindness~
+COPY~Rylorn\Spells\wwundead.spl~ ~override~
+APPEND~pdialog.2da~
+~Rylorn RYLORNP RYLORNJ RYLORND RYLOR25P RYLOR25J RYLOR25D RYLOR25~
+UNLESS~Rylorn~
+APPEND~interdia.2da~
+~Rylorn BRYLORN BRYLOR25~
+UNLESS~Rylorn~
+EXTEND_TOP~AR0700.bcs~ ~Rylorn\Scripts\AR0700.baf~
+EXTEND_TOP~AR1002.bcs~ ~Rylorn\Scripts\AR1002.baf~
+EXTEND_TOP~AR5500.bcs~ ~Rylorn\Scripts\AR5500.baf~
+EXTEND_BOTTOM~AR6200.bcs~ ~Rylorn\Scripts\AR6200.baf~
+EXTEND_TOP~HAER25.bcs~ ~Rylorn\Scripts\HAER25.baf~
+COPY~Rylorn\Portraits~ ~override~
+COPY~Rylorn\Portraits~ ~portraits~
+COPY~Rylorn\Items\bow99.itm~ ~override\bow99.itm~
+COPY~Rylorn\Items\ascens00.itm~ ~override\ascens00.itm~
+SAY NAME1~Ascension~
+SAY NAME2~Ascension~
+SAY UNIDENTIFIED_DESC~"Ascension" is one of the finest weapons created at the Great Foundry, the home of the Believers of the Source. It is one of three weapons called the "Triad of Tests", including the hammer "Reason" and the dagger "Enlightenment". The symbol of the faction is engraved on the axe head, and the edges of the blades are so sharp they could split a hair lengthwise. The Nameless One was first who used this weapon.
+
+STATISTICS:
+Damage: 3-10 Slashing
+Enchanted: +2
+Special:
+  +2 Slashing Damage
+  +1 to Charisma
+  +1 to Armor Class 
+THAC0: +2
+Speed: 4
+Weight: 4
+Proficiency: Axes~
+COPY~Rylorn\Items\baatmace.itm~ ~override\baatmace.itm~
+SAY NAME1~Baatezu Mace~
+SAY NAME2~Baatezu Mace~
+SAY UNIDENTIFIED_DESC~Made from ore found only in the wastelands of Avernus. Baatezu have created a metal called Baatorian Green Steel. Weapons produced from this metal are lighter and stronger than those forged of ordinary steel and tend to inflict greater damage. Although produced in great quantities for the Blood Wars, weapons such as these are rarely found outside of Baator.
+
+STATISTICS:
+Damage: 3-9 Crushing
+THAC0: +1
+Speed: 6 
+Weight: 10
+Proficiency: Mace~
+COPY~Rylorn\Items\brac22.itm~ ~override\brac22.itm~
+SAY NAME1~Bracers~
+SAY NAME2~Paladin's Bracers~
+SAY UNIDENTIFIED_DESC~Bracers are thick bands of metal or leather that are strapped, belted, or tied to a character's forearm.~
+SAY DESC~Defenders of justice are ever eager to acquire another tool which may be used to thwart the machinations of evil.  However, these particular gauntlets can only be worn by a warrior of the purest heart.
+
+STATISTICS:
+  +10 to maximum HP total while equipped
+  Weight:  1
+
+Usable By:
+Paladins~
+COPY~Rylorn\Items\brac23.itm~ ~override\brac23.itm~ 
+SAY NAME1~Bracers~
+SAY NAME2~Blessed Bracers~
+SAY UNIDENTIFIED_DESC~Bracers are thick bands of metal or leather that are strapped, belted, or tied to a character's forearm.~
+SAY DESC~The willing sacrifice of a vast fortune in gold, combined with the holy venerations of the sanctifying ceremony, have convinced the blessed powers to transform these already formidable gauntlets into gloves of awesome righteous power. 
+
+STATISTICS:
+  Cast Cure Critical Wounds once/day
+  Cast Resurrection once/day
+ +10 to maximum HP total while equipped
+  Weight:  1
+
+Usable By:
+Paladins~
+
+COPY~Rylorn\Items\clesfire.itm~ ~override\clesfire.itm~
+SAY NAME1~Celestial Fire~
+SAY NAME2~Celestial Fire~
+SAY UNIDENTIFIED_DESC~"Celestial Fire" is the only object that Trias has left to remind him of the Upper Planes. This heavy blade is warm to the touch, and flames have been carved across the surface of the blade. The intricacy of the carvings is breathtaking; they are done with such skill that the sword seems to be burning with metallic flames... someone must have spent several centuries rendering them. The metal of the blade is unfamiliar... it is heavy, but it shines like silver. The sword looks several millennia old. A faint hum can be felt within it, and the vibration becomes stronger when it touches human flesh. Not surprisingly, "Celestial Fire" can be wielded only by those with sufficient strength and purity of heart. When used in combat, "Celestial Fire" bursts into a holy radiance that burns any evil creature it strikes in combat.
+
+STATISTICS:
+Damage: 3-18 Slashing
+Enchanted: +2
+Special:
+   +2 to Armor Class
+   +10 Fire Damage
+   +10% Resistance to Slashing Attacks
+THAC0: +2
+Speed: 3
+Weight: 5
+Proficiency: Long sword
+Only usable by:
+Lawful Good characters~
+
+COPY~Rylorn\Items\cyricnec.itm~ ~override\cyricnec.itm~
+SAY NAME1~Cyric's Necklace~
+SAY NAME2~Cyric's Necklace~
+SAY UNIDENTIFIED_DESC~This necklace radiates a faint chill. A powerful Anti-Magic Aura around this amulet makes it useful against any magic user
+
+STATISTICS:
+15% Magic Resistance
+
+Useable by:
+Everyone~
+COPY~Rylorn\Items\dakleat0.itm~ ~override\dakleat0.itm~
+SAY NAME1~DAK'KON'S ZERTH ARMOR~
+SAY NAME2~DAK'KON'S ZERTH ARMOR~
+SAY UNIDENTIFIED_DESC~Dak'kon's ceremonial zerth armor. It is fashioned of interlocking metal rings, formed of the same substance that Dak'kon's blade is made of. (Unlike the blade, however, it does not appear that the armor changes based on the mental state of the wielder.) The armor is worn over a padded red tunic, and spiked bracers and shoulder pads have been added to give greater protection to the arms and upper body. While Dak'kon's armor is similar to chain mail, it is lighter and more flexible, allowing him to wield his sword more effectively. It seems that when the sword and armor are used in tandem, the armor actually becomes lighter in weight and more flexible, more like cloth than chain mail. Whether this is a unique property of karach, or whether this is some magical effect of the two items, is unknown.
+
+STATISTICS:
+Armor Class: 5
+Weight: 25~
+
+COPY~Rylorn\Items\demon312.itm~ ~override\demon312.itm~
+SAY NAME1~Demon's Claw~
+SAY NAME2~Demon's Claw~
+SAY UNIDENTIFIED_DESC~Demon's Claw~
+COPY~Rylorn\Items\drag1111.itm~ ~override\drag1111.itm~
+SAY NAME1~Dragon's Claw~
+SAY NAME2~Dragon's Claw~
+SAY UNIDENTIFIED_DESC~Dragon's Claw~
+COPY~Rylorn\Items\foolsmit.itm~ ~override\foolsmit.itm~
+SAY NAME1~Foolsmiter~
+SAY NAME2~Foolsmiter~
+SAY UNIDENTIFIED_DESC~This war hammer has a huge stone head in the shape of a rectangular block. Faint traces of gore and blood are on all sides of the hammer's head. The shaft is of a thick wood that looks too weak to support the hammer head's weight. This enchanted hammer was used as a tool by the Athar at one time during their religious persecution phase of their faction history. The magical war-hammer "Foolsmiter" was constructed so that it did additional damage against opponents who were particularly stupid. When it was crafted, however, the enchantment was twisted such that if the user was less intelligent than the target struck by the hammer, the wielder would take damage as well. For many years, the hammer became a test rite between rival members of the Athar as a primitive (and lethal) IQ test. It was stolen from their headquarters in the Shattered Temple many years ago and has resurfaced once or twice across the Planes. It is believed that the Intelligence vs. Intelligence contest the hammer once inflicted on the wielder and his enemies has dissipated from the hammer over time, but no one has been been confident enough to put it to the test.
+
+STATISTICS:
+Damage: 4-14 Crushing
+Enchanted: +2
+THAC0: +2
+Speed: 10
+Weight: 15
+Proficiency: Hammers~
+COPY~Rylorn\Items\greatd99.itm~ ~override\greatd99.itm~
+SAY NAME1~Greater demon's Claw~
+SAY NAME2~Greater Demon's Claw~
+SAY UNIDENTIFIED_DESC~Greater Demon's Claw~
+COPY~Rylorn\Items\heartgri.itm~ ~override\heartgri.itm~
+SAY NAME1~Heartgrinder~
+SAY NAME2~Heartgrinder~
+SAY UNIDENTIFIED_DESC~A single teardrop of the wielder's blood, applied at the border where the axe meets the handle, is sufficient to awaken "Heartgrinder." Once applied, the drop of blood freckles across the blade and handle, giving it a dull red radiance. The glow from Heartgrinder pulses, matching the heartbeat of its wielder. No matter what the target, Heartgrinder is a powerful weapon, capable of tearing through nearly any defenses. Against targets with blood running in their veins (whether their own or another's -- vampires beware), Heartgrinder inflicts additional damage, as every stroke also smashes the target's heart, no matter what location the axe struck.
+
+STATISTICS:
+Damage: 3-10 Slashing
+Enchanted: +3
+Special: 1-6 Electrical Damage
+THAC0: +2
+Speed: 6
+Weight: 4
+Proficiency: Axes~
+
+COPY~Rylorn\Items\ignushan.itm~ ~override\ignushan.itm~
+SAY NAME1~Ignus' Fireball~
+SAY NAME2~Ignus' Fireball~
+SAY UNIDENTIFIED_DESC~This was Ignus' main attack. It was series of fireballs he used to fire at an opponent.
+
+STATISTICS:
+Damage: 1-3 Missile
+Damage: 2-8 Fire
+Speed: 5
+Weight: 0
+Proficiency: Dagger(throwing weapon)
+Requires no ammo
+Only Usable by Mage (Single,Dual & Multi-Class)
+Sorcerer~
+
+COPY~Rylorn\Items\judgment.itm~ ~override\judgment.itm~
+SAY NAME1~Final Judgment~
+SAY NAME2~Final Judgment~
+SAY UNIDENTIFIED_DESC~This archaic double-bladed battle-axe is reminiscent of an executioner's axe; the axe head has been forged into the symbol of the Mercykiller Faction (a red dragon with its wings outspread...the outstretched wings have been shaped into the blades of the axe). The axe itself is huge; even wielded two-handed, it would require tremendous strength to use effectively. For a spectral entity, Vhailor must be extremely strong. This axe is as much a part of Vhailor as his armor, and the axe itself carries part of Vhailor's essence within it. As a result, it is utterly devoted to justice and will not allow the user to rest while "judgments" are left to be delivered. The considerable damage it causes to an opponent is doubled if the axe strikes a  guilty or chaotic creature. Furthermore, the axe itself lends some of its strength to the wielder, giving him added protection from attacks. The origin of this axe is unknown. If you were to hazard a guess, the axe gained its powers simply from Vhailor's belief. If he were to die a second death, you don't know what would happen to it.
+
+STATISTICS:
+(Cursed)
+Damage: 5-15 Slashing
+Enchanted: +2
+Special: 1-6 Fire Damage to target
+THAC0: +3
+Speed: 10
+Weight: 20
+Proficiency: Axes
+Usable only by Lawful characters~
+
+COPY~Rylorn\Items\karbakey.itm~ ~override\karbakey.itm~
+SAY NAME1~Strange Key~
+SAY NAME2~Strange Key~
+SAY UNIDENTIFIED_DESC~This key was found on corpse of Karbarolux. Perhaps you could acces his magical treasure with it~
+COPY~Rylorn\Items\karbarol.itm~ ~override\karbarol.itm~
+SAY NAME1~Lich's Hand~
+SAY NAME1~Lich's Hand~
+SAY UNIDENTIFIED_DESC~Karbarolux' main attack~
+COPY~Rylorn\Items\malice00.itm~ ~override\malice00.itm~
+SAY NAME1~Unholy Malice~
+SAY NAME2~Unholy Malice~
+SAY UNIDENTIFIED_DESC~This sword was once belonged to a long forgotten god, whose naime is also forgotten. What is known however is the fact that this sword is a formidable weapon. It bears such a hatred to all living things that will actually open the portal between Negative Energy plane and any other plane the Unfortunate victim is currently in and drain the life force until the creature is completely sucked out of life essence. Any Magical protections are pointless against this sword, as it will steadfastly dispel any magical effects placed upon a creature. It also bears magical resistance of it's own, so magical attacks will also prove useless. Only people of the most black of hearts may even dare to equip this weapon.
+
+STATISTICS:
+EQUIPPED ABILITIES:
+25% Magic Resistance
+Dispel Magic whenever the sword strikes an opponent
+50% chance that the enemy will be drained 1 level whenever the sword strikes an opponent
+THAC0 +5 bonus
+Damage: 1D12 +5
+Damage Type: Slashing
+Weight:7
+Speed:5
+Proficiency Type:Two Handed Sword
+Type: Two Handed
+Only Usable by:
+Blackguard~
+
+COPY~Rylorn\Items\monas000.itm~ ~override\monas000.itm~
+SAY NAME1~Strange looking scroll~
+SAY NAME2~Strange looking scroll~
+SAY UNIDENTIFIED_DESC~This scroll looks very difficult to handle. Perhaps it can be of some use to you.~
+COPY~Rylorn\Items\n00001.itm~ ~override\n00001.itm~
+SAY NAME1~Scroll~
+SAY NAME1~Scroll~
+SAY UNIDENTIFIED_DESC~This scroll will return you back to the Promenade~
+COPY~Rylorn\Items\nordomcr.itm~ ~override\nordomcr.itm~
+SAY NAME1~NORDOM'S CROSSBOWS~
+SAY NAME2~NORDOM'S CROSSBOWS~
+SAY UNIDENTIFIED_DESC~Nordom's home plane of Mechanus is driven by great clockwork gears. Tending these gears and making sure they run smoothly are given to creatures called "gear spirits."  These gear spirits have the ability to turn themselves into almost any tool or common mechanical device... even crossbows. Nordom's two crossbows are actually two gear spirits, and they seem to have willingly fled with him from Mechanus. Their duties are so essential to the smooth functioning of Mechanus that the modrons have officially assigned these spirits to the various gears. While the gear spirits love the gears they tend so much, their servitude to the modrons rankles them, making them somewhat disgruntled. As a result, there are tales of gear spirits that leave the great gears of Mechanus, leaving their duties for a while to sample the Planes beyond their own. Most likely, Nordom's two crossbows caught this wanderlust, and they now piggyback along with him, peppering any hostile creature they see with crossbow bolts. The gear spirits can make endless supplies of these bolts, so there is never any need for Nordom to reload unless he wishes to fire new crossbow bolts. The crossbows occasionally make small clicking and rattling noises. They seem to be talking to each other, but their conversation is indecipherable. They're most likely discussing the finer points of crossbow mechanics.
+
+STATISTICS:
+Damage: Varies According to Ammo
+Enchanted: +1
+THAC0: +1
+Speed: 10
+Weight: 7
+Requires no ammo
+Proficiency: Crossbow~
+COPY~Rylorn\Items\phantom0.itm~ ~override\phantom0.itm~
+SAY NAME1~Phantom Dagger~
+SAY NAME2~Phantom Dagger~
+SAY UNIDENTIFIED_DESC~As if of its own volition, this dagger seems to reach out to its enemies, instinctively finding the most vulnerable spots on any creature..
+
+STATISTICS:
+Damage: 1-6 Piercing
+Enchanted: +3
+Special: +3 Piercing Damage
+THAC0: +3
+Speed: 2
+Weight: 1
+Proficiency: Dagger
+Not usable by Priests~
+COPY~Rylorn\Items\ravelfin.itm~ ~override\ravelfin.itm~
+SAY NAME1~Ravel's Fingernail~
+SAY NAME2~Ravel's Fingernail~
+SAY UNIDENTIFIED_DESC~This twisted fingernail of extruded night hag skin has got to be one of the ugliest things you have ever seen. Its mottled green, red, and black surface is almost a foot long, and it seems like it was used alternately as a scratching aid, nose-picking tool, and gardening trowel. Looking at it makes you wish that Ravel did chew her nails. Or at least had a nail file with her in the maze.
+
+STATISTICS:
+(Unique, Artifact)
+Damage: 2-7 Piercing
+Enchanted: +2
+Special: 2-12 Poison Damage
+THAC0: +2
+Speed: 1
+Weight: 1
+Proficiency: Dagger
+Not usable by Priests~
+COPY~Rylorn\Items\ryring00.itm~ ~override\ryring00.itm~
+SAY NAME1~Rylorn's Ring~
+SAY NAME2~Rylorn's Ring~
+SAY UNIDENTIFIED_DESC~This ring offers some protection against the attacks, natural and magical alike. This ring was given to Rylorn by his superiors in the Temple of Dark Sun.
+
+STATISTICS:
+AC +1
++1 to all saving throws
+Immunity to fear and morale failure
+
+Only Usable by: Rylorn~
+COPY~Rylorn\Items\salieru0.itm~ ~override\salieru0.itm~
+SAY NAME1~Tear of Salieru-Dei~
+SAY NAME2~Tear of Salieru-Dei~
+SAY UNIDENTIFIED_DESC~This glistening red tear was shed by the martyred Harmonium officer Salieru-Dei when he was put to death on the Harmonium's home plane of Ortho. Mistaken as a member of the hated Revolutionary League, Salieru-Dei's obedience and loyalty was such he could not bring himself to challenge the allegations of his superiors. At the moment of his execution, three tears fell from his right eye and turned to stone as they fell upon the flagstones of the square. Ironically enough, an anarchist subsequently revealed the Harmonium's mistake to the public, discrediting them. Ever since, the tears of Salieru-Dei have been considered relics of the Harmonium... and used as a lesson to the evils of unquestioning obedience by the Revolutionary League.
+
+STATISTICS:
+(Artifact)
+Special: Permanent +1 Constitution
+Weight: 0
+Usable only by Lawful Good Characters~
+COPY~Rylorn\Items\sw1h64.itm~ ~override\sw1h64.itm~
+SAY NAME1~Bastard Sword~
+SAY NAME2~Purifier +4~
+SAY UNIDENTIFIED_DESC~Also known as the hand-and-a-half sword, the bastard sword derives its name from the fact that it is halfway between the two-handed sword and the long sword. The bastard sword has a double-edged blade and a long grip, which can accommodate both hands if preferred.  The overall length of the bastard sword ranges between four feet and four feet ten inches.   
+
+STATISTICS:
+
+Damage:  2D4 
+Damage type:  slashing
+Weight: 10
+Speed Factor: 8
+Proficiency Type: Bastard Sword
+Type:  1-handed
+Requires: 11 Strength
+Not Usable By:
+ Druid
+ Cleric
+ Mage
+ Thief~
+SAY DESC~This single handed weapon is infused with the very essence of virtue, and is rumored to be the sanctified blade of the famous paladin Sir Wediyer.  The weapon was lost when Sir Wediyer pursued a fleeing pit fiend through a planar rift.  Neither the fiend nor Sir Wediyer ever returned.
+
+STATISTICS
+
+Equipped Abilities: 
+    20% Magic Resistance
+Combat Abilities: 
+    Additional +4 damage versus chaotic evil opponents
+    
+THACO:  +4 bonus
+Damage:  2D4 + 4
+Damage type:  slashing
+Weight:  6
+Speed Factor: 4
+Proficiency Type: Bastard Sword
+Type:  1-handed
+Requires: 11 Strength
+Usable By:
+Paladins~
+COPY~Rylorn\Items\sw1h65.itm~ ~override\sw1h65.itm~
+SAY NAME1~Bastard Sword~
+SAY NAME2~Purifier +5~
+SAY UNIDENTIFIED_DESC~Also known as the hand-and-a-half sword, the bastard sword derives its name from the fact that it is halfway between the two-handed sword and the long sword. The bastard sword has a double-edged blade and a long grip, which can accommodate both hands if preferred.  The overall length of the bastard sword ranges between four feet and four feet ten inches.
+
+STATISTICS:
+
+Damage:  2D4 
+Damage type:  slashing
+Weight: 10
+Speed Factor: 8
+Proficiency Type: Bastard Sword
+Type:  1-handed
+Requires: 11 Strength
+Not Usable By:
+ Druid
+ Cleric
+ Mage
+ Thief~
+SAY DESC~~
+COPY~Rylorn\Items\sw2h10.itm~ ~override\sw2h10.itm~
+SAY NAME1~Two-Handed Sword~
+SAY NAME2~Carsomyr +5~
+SAY UNIDENTIFIED_DESC~The two-handed sword is a derivative of the long sword.  Weaponsmiths have always looked for ways to improve existing weapons.  In an effort to improve the long sword, the blade was lengthened.  Eventually, the handle had to be extended and two hands became necessary to properly swing the sword.  The primary function of two-handed swords is cleaving mounted knights and breaking up pike formations. 
+
+STATISTICS:
+
+Damage:  1D10
+Damage type:  slashing
+Weight: 15
+Speed Factor: 10
+Proficiency Type: Two Handed sword
+Type:  2-handed
+Requires: 14 Strength
+Not Usable By:
+ Druid
+ Cleric
+ Mage 
+ Thief~
+SAY DESC~The Holy Avenger: Carsomyr
+Carsomyr is a weapon of legend, perhaps one of the most powerful blades ever forged on Faerun, though its origin and history is thought purposefully forgotten, such that the sword itself never overshadow the importance of the struggles that must be fought today.  It is infused with the very essence of virtue, and requires as much from any paladin that would hope to wield it.  The evils of the Realms must truly stand aside when this weapon is brought to bear, their magic dispelled with a word, steadfastly resisted with ease.  Carsomyr also harbors a special distaste for the forces of evil and chaos, and such creatures must fear additional damage from its touch in battle.  
+
+STATISTICS
+
+Equipped Abilities: 
+    50% Magic Resistance
+    Dispel magic 3 times per day
+Combat Abilities: 
+    +5 damage to chaotic evil opponents in addition to other bonuses.
+    Dispels magic whenever the sword strikes an opponent
+THAC0: +5 bonus
+Damage:  1D12 +5
+Damage type:  slashing
+Weight:  7
+Speed Factor: 5
+Proficiency Type: Two handed sword 
+Type:  2-handed
+Requires: 14 Strength
+Usable By:
+ Paladins~
+COPY~Rylorn\Items\sw2h19.itm~ ~override\sw2h19.itm~
+SAY NAME1~Two-Handed Sword~
+SAY NAME2~Carsomyr +6~
+SAY UNIDENTIFIED_DESC~The two-handed sword is a derivative of the long sword.  Weaponsmiths have always looked for ways to improve existing weapons.  In an effort to improve the long sword, the blade was lengthened.  Eventually, the handle had to be extended and two hands became necessary to properly swing the sword.  The primary function of two-handed swords is cleaving mounted knights and breaking up pike formations. 
+
+STATISTICS:
+
+Damage:  1D10
+Damage type:  slashing
+Weight: 15
+Speed Factor: 10
+Proficiency Type: Two Handed sword
+Type:  2-handed
+Requires: 14 Strength
+Not Usable By:
+ Druid
+ Cleric
+ Mage 
+ Thief~
+SAY DESC~Even a Holy Relic as powerful as Carsomyr is made even greater when combined with the Eye of Tyr.
+
+STATISTICS
+
+Equipped Abilities: 
+    50% Magic Resistance
+    Dispel magic 3 times per day
+Combat Abilities: 
+    +6 damage to chaotic evil opponents in addition to other bonuses.
+    Dispels magic whenever the sword strikes an opponent
+THAC0: +6 bonus
+Damage:  1D12 +6
+Damage type:  slashing
+Weight:  6
+Speed Factor: 4
+Proficiency Type: Two handed sword 
+Type:  2-handed
+Requires: 14 Strength
+Usable By:
+ Paladins~
+COPY~Rylorn\Items\vhaarm00.itm~ ~override\vhaarm00.itm~
+SAY NAME1~Vhailor's Mercykiller Armor~
+SAY NAME2~Vhailor's Mercykiller Armor~
+SAY UNIDENTIFIED_DESC~This archaic suit of armor is animated by Vhailor's life force. It bears numerous minor dents and scratches, but otherwise, it seems to have withstood the test of time...at least better than Vhailor's physical body. Blades decorate the shoulders of this suit of armor, and the symbol of the Mercykiller faction (a red dragon with its wings outspread) is emblazoned on the chest piece. This suit of armor is part of Vhailor... destroying Vhailor (if such a thing were possible) would most likely result in the destruction of the armor.
+
+STATISTICS:
+Armor Class: 2
+Weight: 75~
+COPY~Rylorn\Items\x001.itm~ ~override\x001.itm~
+SAY NAME1~Dragon Manual~
+SAY NAME2~Dragon Manual~
+SAY UNIDENTIFIED_DESC~This Manual describes the process of Summoning the Black Dragon, the most unruly inhabitant of wastelands. If summoned properly the Dragon will obey the Caster until slain or summoning period expired.
+
+STATISTICS:
+Summon Black Dragon
+Book will vanish after use
+Only usable by: Mages(Single,Dual & Multi-Class)
+Sorcerer~
+COPY~Rylorn\Items\yyyy0000.itm~ ~override\yyyy0000.itm~
+SAY NAME1~Head of Ryan Trawl~
+SAY NAME2~Head of Ryan Trawl~
+SAY UNIDENTIFIED_DESC~This is the Head of Ryan Trawl~
+COPY~Rylorn\Stores\melin222.sto~ ~override\melin222.sto~
+ADD_STORE_ITEM~ascens00~ #10 #0 #0 ~IDENTIFIED~ #1
+ADD_STORE_ITEM~baatmace~ #10 #0 #0 ~IDENTIFIED~ #1
+ADD_STORE_ITEM~dakleat0~ #10 #0 #0 ~IDENTIFIED~ #1
+ADD_STORE_ITEM~foolsmit~ #10 #0 #0 ~IDENTIFIED~ #1
+ADD_STORE_ITEM~heartgri~ #10 #0 #0 ~IDENTIFIED~ #1
+ADD_STORE_ITEM~ignushan~ #10 #0 #0 ~IDENTIFIED~ #1
+ADD_STORE_ITEM~judgment~ #10 #0 #0 ~IDENTIFIED~ #1
+ADD_STORE_ITEM~nordomcr~ #10 #0 #0 ~IDENTIFIED~ #1
+ADD_STORE_ITEM~phantom0~ #10 #0 #0 ~IDENTIFIED~ #1
+ADD_STORE_ITEM~ravelfin~ #10 #0 #0 ~IDENTIFIED~ #1
+ADD_STORE_ITEM~vhaarm00~ #10 #0 #0 ~IDENTIFIED~ #1
+COPY_EXISTING~wmart2.sto~ ~override\wmart2.sto~
+ADD_STORE_ITEM~salieru0~ #10 #0 #0 ~IDENTIFIED~ #1
+ADD_STORE_ITEM~clesfire~ #10 #0 #0 ~IDENTIFIED~ #1
+ADD_STORE_ITEM~monas000~ #10 #0 #0 ~IDENTIFIED~ #1
+COPY~Rylorn\Sounds~ ~override~
+COPY~Rylorn\Creatures\asdiolua.cre~ ~override\asdiolua.cre~
+SAY NAME1~Marilith~
+SAY NAME2~Marilith~
+ADD_CRE_ITEM~MARILI~ #0 #0 #0~IDENTIFIED&UNSTEALABLE&UNDROPPABLE~ ~WEAPON2~ EQUIP
+ADD_CRE_ITEM~HELMNOAN~ #0 #0 #0~IDENTIFIED&UNSTEALABLE&UNDROPPABLE~ ~HELMET~
+ADD_CRE_ITEM~RINGDEMN~ #0 #0 #0~IDENTIFIED&UNSTEALABLE&UNDROPPABLE~ ~LRING~
+ADD_CRE_ITEM~IMMUNE2~ #0 #0 #0~IDENTIFIED&UNSTEALABLE&UNDROPPABLE~ ~RRING~
+COPY~Rylorn\Creatures\blackgu2.cre~ ~override\blackgu2.cre~
+SAY NAME1~Monastery Guard~
+SAY NAME2~Monastery Guard~
+ADD_CRE_ITEM~sw2h01~ #0 #0 #0~NONE~ ~WEAPON2~ EQUIP TWOHANDED
+ADD_CRE_ITEM~helm12~ #0 #0 #0~IDENTIFIED~ ~HELMET~
+ADD_CRE_ITEM~iplat01~ #0 #0 #0~IDENTIFIED~ ~ARMOR~
+COPY~Rylorn\Creatures\blackgu3.cre~ ~override\blackgu3.cre~
+SAY NAME1~Jovilus~
+SAY NAME2~Jovilus~
+ADD_CRE_ITEM~sw2h01~ #0 #0 #0~NONE~ ~WEAPON2~ EQUIP TWOHANDED
+ADD_CRE_ITEM~helm12~ #0 #0 #0~IDENTIFIED~ ~HELMET~
+ADD_CRE_ITEM~iplat01~ #0 #0 #0~IDENTIFIED~ ~ARMOR~
+COPY~Rylorn\Creatures\blackgu4.cre~ ~override\blackgu4.cre~
+SAY NAME1~Blackguard~
+SAY NAME2~Blackguard~
+ADD_CRE_ITEM~sw2h01~ #0 #0 #0~NONE~ ~WEAPON2~ EQUIP TWOHANDED
+ADD_CRE_ITEM~helm12~ #0 #0 #0~IDENTIFIED~ ~HELMET~
+ADD_CRE_ITEM~iplat01~ #0 #0 #0~IDENTIFIED~ ~ARMOR~
+COPY~Rylorn\Creatures\blackgu5.cre~ ~override\blackgu5.cre~
+SAY NAME1~Blackguard~
+SAY NAME2~Blackguard~
+ADD_CRE_ITEM~sw2h01~ #0 #0 #0~NONE~ ~WEAPON2~ EQUIP TWOHANDED
+ADD_CRE_ITEM~helm12~ #0 #0 #0~IDENTIFIED~ ~HELMET~
+ADD_CRE_ITEM~iplat01~ #0 #0 #0~IDENTIFIED~ ~ARMOR~
+COPY~Rylorn\Creatures\blackgua.cre~ ~override\blackgua.cre~
+SAY NAME1~Monastery Guard~
+SAY NAME2~Monastery Guard~
+ADD_CRE_ITEM~sw2h01~ #0 #0 #0~NONE~ ~WEAPON2~ EQUIP TWOHANDED
+ADD_CRE_ITEM~helm12~ #0 #0 #0~IDENTIFIED~ ~HELMET~
+ADD_CRE_ITEM~iplat01~ #0 #0 #0~IDENTIFIED~ ~ARMOR~
+COPY~Rylorn\Creatures\demon312.cre~ ~override\demon312.cre~
+SAY NAME1~Greater Demon~
+SAY NAME2~Greater Demon~
+ADD_CRE_ITEM~demon312~ #0 #0 #0~IDENTIFIED&UNSTEALABLE&UNDROPPABLE~ ~WEAPON2~ EQUIP
+COPY~Rylorn\Creatures\drag1111.cre~ ~override\drag1111.cre~
+SAY NAME1~Vhalixillus~
+SAY NAME2~Vhalixillus~
+ADD_CRE_ITEM~drag1111~ #0 #0 #0~IDENTIFIED&UNSTEALABLE&UNDROPPABLE~ ~WEAPON2~ EQUIP
+COPY~Rylorn\Creatures\dragonxy.cre~ ~override\dragonxy.cre~
+SAY NAME1~Black Dragon~
+SAY NAME2~Black Dragon~
+ADD_CRE_ITEM~sper06~ #0 #0 #0~IDENTIFIED&UNSTEALABLE&UNDROPPABLE~ ~WEAPON2~ EQUIP
+COPY~Rylorn\Creatures\greatd99.cre~ ~override\greatd99.cre~  
+SAY NAME1~Cornugon~
+SAY NAME2~Cornugon~
+ADD_CRE_ITEM~greatd99~ #0 #0 #0~IDENTIFIED&UNSTEALABLE&UNDROPPABLE~ ~WEAPON2~ EQUIP
+COPY~Rylorn\Creatures\habre000.cre~ ~override\habre000.cre~ 
+SAY NAME1~Branson~
+SAY NAME2~Branson~
+ADD_CRE_ITEM~blun04~ #0 #0 #0~IDENTIFIED~ ~WEAPON2~ EQUIP
+ADD_CRE_ITEM~chan01~ #0 #0 #0~IDENTIFIED~ ~ARMOR~
+COPY~Rylorn\Creatures\hubert00.cre~ ~override\hubert00.cre~ 
+SAY NAME1~Hubert~
+SAY NAME2~Hubert~
+ADD_CRE_ITEM~sw2h01~ #0 #0 #0~NONE~ ~WEAPON2~ EQUIP TWOHANDED
+ADD_CRE_ITEM~helm12~ #0 #0 #0~IDENTIFIED~ ~HELMET~
+ADD_CRE_ITEM~iplat01~ #0 #0 #0~IDENTIFIED~ ~ARMOR~
+COPY~Rylorn\Creatures\jana0000.cre~ ~override\jana0000.cre~
+SAY NAME1~Jana~
+SAY NAME2~Jana~
+COPY~Rylorn\Creatures\joanne00.cre~ ~override\joanne00.cre~
+SAY NAME1~Joanne~
+SAY NAME2~Joanne~
+COPY~Rylorn\Creatures\jorlun00.cre~ ~override\jorlun00.cre~
+SAY NAME1~Jorlun~
+SAY NAME2~Jorlun~
+COPY~Rylorn\Creatures\karbarol.cre~ ~override\karbarol.cre~
+SAY NAME1~Karbarolux~
+SAY NAME2~Karbarolux~
+ADD_CRE_ITEM~karbakey~ #0 #0 #0~NONE~ ~INV8~
+ADD_CRE_ITEM~helm18~ #0 #0 #0~IDENTIFIED&UNSTEALABLE&UNDROPPABLE~ ~HELMET~
+ADD_CRE_ITEM~karbarol~ #0 #0 #0~IDENTIFIED&UNSTEALABLE&UNDROPPABLE~ ~WEAPON2~ EQUIP
+COPY~Rylorn\Creatures\lar12345.cre~ ~override\lar12345.cre~
+SAY NAME1~Lar~
+SAY NAME2~Lar~
+COPY~Rylorn\Creatures\larry000.cre~ ~override\larry000.cre~
+SAY NAME1~Larry~
+SAY NAME2~Larry~
+COPY~Rylorn\Creatures\lawyer00.cre~ ~override\lawyer00.cre~
+SAY NAME1~Thomas Fidelius III~
+SAY NAME1~Thomas Fidelius III~
+COPY~Rylorn\Creatures\lenya000.cre~ ~override\lenya000.cre~
+SAY NAME1~Lenya~
+SAY NAME2~Lenya~
+COPY~Rylorn\Creatures\mariena0.cre~ ~override\mariena0.cre~
+SAY NAME1~Mariena~
+SAY NAME2~Mariena~
+COPY~Rylorn\Creatures\melin000.cre~ ~override\melin000.cre~
+SAY NAME1~Melin~
+SAY NAME2~Melin~
+ADD_CRE_ITEM~sw1h07~ #0 #0 #0~IDENTIFIED~ ~WEAPON2~ EQUIP
+ADD_CRE_ITEM~leat04~ #0 #0 #0~IDENTIFIED~ ~WEAPON2~ EQUIP
+COPY~Rylorn\Creatures\messtwoo.cre~ ~override\messtwoo.cre~
+SAY NAME1~Messenger~
+SAY NAME2~Messenger~
+COPY~Rylorn\Creatures\riolus00.cre~ ~override\riolus00.cre~
+SAY NAME1~Riolus~
+SAY NAME2~Riolus~
+ADD_CRE_ITEM~sw2h01~ #0 #0 #0~NONE~ ~WEAPON2~ EQUIP TWOHANDED
+ADD_CRE_ITEM~helm12~ #0 #0 #0~IDENTIFIED~ ~HELMET~
+ADD_CRE_ITEM~iplat01~ #0 #0 #0~IDENTIFIED~ ~ARMOR~
+ADD_CRE_ITEM~cyricnec~ #0 #0 #0~IDENTIFIED&UNSTEALABLE&UNDROPPABLE~ ~INV8~
+COPY~Rylorn\Creatures\rylmesse.cre~ ~override\rylmesse.cre~
+SAY NAME1~Messenger~
+SAY NAME2~Messenger~
+COPY~Rylorn\Creatures\tistor00.cre~ ~override\tistor00.cre~
+SAY NAME1~Tistor~
+SAY NAME2~Tistor~
+ADD_CRE_ITEM~sw2h01~ #0 #0 #0~NONE~ ~WEAPON2~ EQUIP TWOHANDED
+ADD_CRE_ITEM~helm12~ #0 #0 #0~IDENTIFIED~ ~HELMET~
+ADD_CRE_ITEM~iplat01~ #0 #0 #0~IDENTIFIED~ ~ARMOR~
+COPY~Rylorn\Creatures\RYLORN.cre~ ~override\RYLORN.cre~
+WRITE_SHORT   0x244 0
+WRITE_BYTE    0x246 ~%C!Blackg%~
+WRITE_BYTE    0x247 0x40
+SAY NAME1~Rylorn~
+SAY NAME2~Rylorn~
+SAY BIO~ When asked about his past Rylorn tells you that he was nothing but a simple warrior before he pledged his life into Cyric's service~
+SAY INITIAL_MEETING ~~ [RYLORNME]
+SAY MORALE ~~ [RYLORNMO]
+SAY LEADER ~~ [HMTHR008]
+SAY TIRED ~~ [HMTHR010]
+SAY BORED ~~ [HMTHR013]
+SAY BATTLE_CRY1 ~~ [GGMAL03]
+SAY BATTLE_CRY2 ~~ [GGMAL04]
+SAY BATTLE_CRY3 ~~ [DEMONV01]
+SAY BATTLE_CRY4 ~~ [DEMONV01]
+SAY DAMAGE ~~ [HMTHR036]
+SAY HURT ~~ [HMTHR014]
+SAY AREA_CITY ~~ [RYLORNCY]
+SAY DYING ~~ [HMTHR037]
+SAY AREA_FOREST ~~ [RYLORNFO]
+SAY AREA_DUNGEON ~~ [RYLORNU]
+SAY SELECT_COMMON1 ~~ [HMTHR001]
+SAY SELECT_COMMON2 ~~ [HMTHR011]
+SAY SELECT_COMMON3 ~~ [HMTHR016]
+SAY SELECT_COMMON4 ~~ [HMTHR017]
+SAY SELECT_COMMON5 ~~ [HMTHR018]
+SAY SELECT_COMMON6 ~~ [HMTHR020]
+SAY SELECT_ACTION1 ~~ [HMTHR003]
+SAY SELECT_ACTION2 ~~ [HMTHR004]
+SAY SELECT_ACTION3 ~~ [HMTHR005]
+SAY SELECT_ACTION4 ~~ [HMTHR006]
+SAY SELECT_ACTION5 ~~ [HMTHR007]
+SAY SELECT_ACTION6 ~~ [HMTHR009]
+SAY SELECT_ACTION7 ~~ [HMTHR023]
+SAY SELECT_RARE1 ~~ [HMTHR030]
+SAY SELECT_RARE2 ~~ [HMTHR032]
+SAY CRITICAL_HIT ~~ [HMTHR025]
+SAY CRITICAL_MISS ~~ [HMTHR002]
+SAY TARGET_IMMUNE ~~ [HMTHR024]
+SAY INVENTORY_FULL ~~ [RYLORNIN]
+SAY HAPPY ~~ [RYLORNHY]
+SAY UNHAPPY_ANNOYED ~~ [RYLORNAN]
+SAY UNHAPPY_SERIOUS ~~ [RYLORNSE]
+SAY UNHAPPY_BREAKING ~~ [RYLORNBR]
+SAY SPELL_DISRUPTED ~~ [HMTHR031]
+SAY SET_A_TRAP ~~ [RYLORNTR]
+SAY HIDDEN_IN_SHADOWS ~~ [RYLORNSH]
+SAY PICKED_POCKET ~~ [RYLORNPO]
+SAY AREA_DAY ~~ [RYLORNDA]
+SAY AREA_NIGHT ~~ [RYLORNNI]
+ADD_CRE_ITEM~sw2h01~ #0 #0 #0~NONE~ ~WEAPON2~ EQUIP TWOHANDED
+ADD_CRE_ITEM~helm12~ #0 #0 #0~IDENTIFIED~ ~HELMET~
+ADD_CRE_ITEM~iplat01~ #0 #0 #0~IDENTIFIED~ ~ARMOR~
+ADD_CRE_ITEM~ryring00~ #0 #0 #0~IDENTIFIED~ ~LRING~
+ADD_CRE_ITEM~n00001~ #0 #0 #0~IDENTIFIED~ ~INV8~
+COMPILE~Rylorn\Scripts\BREGA.baf~
+COMPILE~Rylorn\Scripts\DRAG3333.baf~
+COMPILE~Rylorn\Scripts\IIIIIII1.baf~
+COMPILE~Rylorn\Scripts\IIIIIIII.baf~
+COMPILE~Rylorn\Scripts\JORLUN1.baf~
+COMPILE~Rylorn\Scripts\JORLUN.baf~
+COMPILE~Rylorn\Scripts\Karba000.baf~
+COMPILE~Rylorn\Scripts\Karbaro0.baf~
+COMPILE~Rylorn\Scripts\LAR1.baf~
+COMPILE~Rylorn\Scripts\lar12345.baf~
+COMPILE~Rylorn\Scripts\LAR.baf~
+COMPILE~Rylorn\Scripts\LARRY1.baf~
+COMPILE~Rylorn\Scripts\LARRY.baf~
+COMPILE~Rylorn\Scripts\MARIENA1.baf~
+COMPILE~Rylorn\Scripts\MARIENA.baf~
+COMPILE~Rylorn\Scripts\N001.baf~
+COMPILE~Rylorn\Scripts\N002.baf~
+COMPILE~Rylorn\Scripts\rylmesse.baf~
+COMPILE~Rylorn\Scripts\Rylo25.baf~
+COMPILE~Rylorn\Scripts\Rylorn.baf~
+COMPILE~Rylorn\Scripts\S00001.baf~
+COMPILE~Rylorn\Scripts\S00002.baf~
+COMPILE~Rylorn\Scripts\S00003.baf~
+COMPILE~Rylorn\Scripts\S00004.baf~
+COMPILE~Rylorn\Scripts\second00.baf~
+COMPILE~Rylorn\Scripts\TIST0000.baf~
+COMPILE~Rylorn\Scripts\LENYA000.baf~
+COMPILE~Rylorn\Scripts\lawyer00.baf~
+COMPILE~Rylorn\Scripts\HABRE000.baf~
+COMPILE~Rylorn\Dialogues\BLACKGUA.d~
+COMPILE~Rylorn\Dialogues\BLACKGU2.d~
+COMPILE~Rylorn\Dialogues\BLACKGU3.d~
+COMPILE~Rylorn\Dialogues\BLACKGU4.d~
+COMPILE~Rylorn\Dialogues\lawyer00.d~
+COMPILE~Rylorn\Dialogues\DRAG1111.d~
+COMPILE~Rylorn\Dialogues\JORLUN00.d~
+COMPILE~Rylorn\Dialogues\KARBA000.d~
+COMPILE~Rylorn\Dialogues\lar12345.d~
+COMPILE~Rylorn\Dialogues\LARRY000.d~
+COMPILE~Rylorn\Dialogues\LENYA000.d~
+COMPILE~Rylorn\Dialogues\MARIENA0.d~
+COMPILE~Rylorn\Dialogues\melin000.d~
+COMPILE~Rylorn\Dialogues\RYLOR25J.d~
+COMPILE~Rylorn\Dialogues\HABRE000.d~
+COMPILE~Rylorn\Dialogues\BRYLORN.d~
+COMPILE~Rylorn\Dialogues\BRYLOR25.d~
+COMPILE~Rylorn\Dialogues\JOANNE00.d~
+COMPILE~Rylorn\Dialogues\hubert00.d~
+COMPILE~Rylorn\Dialogues\TISTOR00.d~
+COMPILE~Rylorn\Dialogues\JANA0000.d~
+COMPILE~Rylorn\Dialogues\RYLORNJ.d~
+COMPILE~Rylorn\Dialogues\MONAS000.d~
+COMPILE~Rylorn\Dialogues\rylmesse.d~
+COMPILE~Rylorn\Dialogues\SARVOLO.d~
+COMPILE~Rylorn\Dialogues\N00001.d~
+COMPILE~Rylorn\Dialogues\RIOLUS.d~
+COMPILE~Rylorn\Dialogues\RYLOR25P.d~
+COMPILE~Rylorn\Dialogues\Rylorn.d~
+COMPILE~Rylorn\Dialogues\MESSTWOO.d~
+COMPILE~Rylorn\Dialogues\RYLORNP.d~
+COPY_EXISTING~KAYL2.cre~ ~override\KAYL2.cre~
+ADD_CRE_ITEM~yyyy0000~ #0 #0 #0~IDENTIFIED~ ~INV8~
+APPEND ~ITEMDIAL.2da~
+~MONAS000 5689 MONAS000~
+APPEND ~ITEMDIAL.2da~
+~N00001   5689 N00001~
+APPEND~mastarea.2da~
+~N001 value~
+UNLESS~N001~
+APPEND~mastarea.2da~
+~N002 value~
+UNLESS~N002~
+APPEND~mastarea.2da~
+~N003 value~
+UNLESS ~N003~
+APPEND~mastarea.2da~
+~N004 value~
+UNLESS~N004~
+APPEND~mastarea.2da~
+~N005 value~
+UNLESS~N005~
+APPEND~mastarea.2da~
+~N006 value~
+UNLESS~N006~
+APPEND~mastarea.2da~
+~N007 value~
+UNLESS~N007~
+APPEND~mastarea.2da~
+~N008 value~
+UNLESS~N008~
+APPEND~mastarea.2da~
+~N009 value~
+UNLESS~N009~
+AT_INTERACTIVE_EXIT ~RYtisunpack.bat~
+
+
+
+
+
+
