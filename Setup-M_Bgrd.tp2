@@ -1,0 +1,237 @@
+BACKUP ~M_Bgrd/backup~
+AUTHOR ~Smeagolheart@forum.baldursgate.com~
+
+// -> Skip to line 225 for actual soundset information or search for s9_soundsetBEGIN
+
+// The "ALWAYS" section sets up different settings needed for BG1EE, BG2EE, and IWDEE
+// IWDEE, BGEE and BG2EE have different columns in charsnd.2da 
+// so each game gets different sounds with subs
+
+ALWAYS
+	// ----------------BGEE SPECIFIC SETTINGS----------------
+	ACTION_IF GAME_IS ~bgee~ BEGIN
+		PRINT ~Installing BGEE version of soundset.~
+		OUTER_SPRINT "s9columntype" "soundNamea soundNameb soundNamec soundNamed soundNamee soundNamef soundNameg soundNameh soundNamei soundNamej soundNamek soundNamel soundNamem soundName8 soundName9 soundNamex soundNamey soundNamez soundName1 soundName2 soundName3 soundName4 soundName5 soundName6 soundName7"
+		DEFINE_ACTION_FUNCTION s9copy BEGIN
+			PRINT ~Installing %soundName% Sound Files...~
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%a.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%a.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%b.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%b.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%c.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%c.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%d.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%d.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%e.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%e.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%f.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%f.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%g.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%g.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%h.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%h.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%i.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%i.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%j.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%j.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%k.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%k.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%l.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%l.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%m.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%m.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%x.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%x.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%y.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%y.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%z.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%z.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%1.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%1.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%2.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%2.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%3.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%3.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%4.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%4.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%5.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%5.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%6.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%6.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%7.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%7.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%8.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%8.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%9.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%9.wav~ ~lang/en_US/sounds~ END							 
+		END		
+	END
+
+	// ----------------BG2EE SPECIFIC SETTINGS----------------
+	ACTION_IF GAME_IS ~bg2ee~ 
+	BEGIN
+		PRINT ~Installing BGEE2 version of soundset.~
+		OUTER_SPRINT "s9columntype" "soundNamea soundNameb soundNamec soundNamed soundNamee soundNamef soundNameg soundNameh soundNamei soundNamej soundNamek soundNames soundNamet soundNameu soundNamev soundNamel soundNamem soundName8 soundName9 soundNamex soundNamey soundNamez soundName1 soundName2 soundName3 soundName4 soundName5 soundName6 soundName7"
+		DEFINE_ACTION_FUNCTION s9copy BEGIN
+			PRINT ~Installing %soundName% Sound Files...~
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%a.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%a.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%b.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%b.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%c.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%c.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%d.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%d.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%e.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%e.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%f.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%f.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%g.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%g.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%h.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%h.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%i.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%i.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%j.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%j.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%k.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%k.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%s.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%s.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%t.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%t.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%u.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%u.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%v.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%v.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%l.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%l.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%m.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%m.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%8.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%8.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%9.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%9.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%x.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%x.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%y.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%y.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%z.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%z.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%1.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%1.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%2.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%2.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%3.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%3.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%4.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%4.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%5.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%5.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%6.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%6.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%7.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%7.wav~ ~lang/en_US/sounds~ END
+		END		
+	END
+
+	// ----------------IWD2EE SPECIFIC SETTINGS----------------
+	ACTION_IF GAME_IS ~iwdee~ 
+	BEGIN
+		PRINT ~Installing IWDEE version of soundset.~
+		OUTER_SPRINT "s9columntype" "soundNamea soundNameb soundNamec soundNamed soundNamee soundNamef soundNameg soundNameh soundName0 soundNamei soundNamej soundNamek soundNames soundNamet soundNameu soundNamev soundNamel soundNamem soundName8 soundName9 soundNamex soundNamey soundName_ soundName# soundNamez soundName1 soundName2 soundName3 soundName4 soundName5 soundName6 soundName7 soundNamew"
+		DEFINE_ACTION_FUNCTION s9copy BEGIN
+			PRINT ~Installing %soundName% Sound Files...~
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%a.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%a.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%b.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%b.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%c.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%c.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%d.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%d.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%e.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%e.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%f.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%f.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%g.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%g.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%h.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%h.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%i.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%i.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%j.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%j.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%k.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%k.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%l.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%l.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%m.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%m.wav~ ~lang/en_US/sounds~ END							 
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%s.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%s.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%t.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%t.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%u.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%u.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%v.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%v.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%w.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%w.wav~ ~lang/en_US/sounds~ END							 
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%x.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%x.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%y.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%y.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%z.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%z.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%0.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%0.wav~ ~lang/en_US/sounds~ END							 
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%1.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%1.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%2.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%2.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%3.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%3.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%4.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%4.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%5.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%5.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%6.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%6.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%7.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%7.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%8.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%8.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%9.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%9.wav~ ~lang/en_US/sounds~ END							 
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%_.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%_.wav~ ~lang/en_US/sounds~ END
+			ACTION_IF FILE_EXISTS ~M_Bgrd/SND/%soundName%/sounds/%soundName%#.wav~ THEN BEGIN
+							 COPY ~M_Bgrd/SND/%soundName%/sounds/%soundName%#.wav~ ~lang/en_US/sounds~ END							 
+		END	
+	END
+END
+
+VERSION ~1.01~
+
+README ~M_Bgrd\Blackguard_ReadMe.txt~
+
+//s9_soundsetBEGIN
+//..................................
+//Heres where you add your soundsets                          
+//..................................
+
+BEGIN ~M_Bgrd~
+	OUTER_SPRINT soundName ~M_Bgrd~
+	LAUNCH_ACTION_FUNCTION s9copy END
+	INCLUDE ~M_Bgrd/baf/core.tpa~
+
+/*  sample:
+
+BEGIN ~Blank~                  												// Need to change "Blank" to whatever your guy is
+	OUTER_SPRINT soundName ~Blank~    										// Need to change "Blank" to whatever your guy is
+	LAUNCH_ACTION_FUNCTION s9copy END									    // stays the same
+	INCLUDE ~M_Bgrd/baf/core.tpa~									// stays the same
+
+*/
+	
